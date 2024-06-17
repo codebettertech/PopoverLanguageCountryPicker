@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 
+@available(macOS 14.0, *)
 @main
 struct PopoverCountryApp: App {
 

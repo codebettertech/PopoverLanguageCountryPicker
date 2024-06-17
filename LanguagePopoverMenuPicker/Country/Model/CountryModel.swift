@@ -11,6 +11,7 @@ import SwiftUI
 import Combine
 import SwiftData
 
+@available(macOS 14.0, *)
 @Observable
 final class CountryModel: CountryProtocol, Identifiable {
 

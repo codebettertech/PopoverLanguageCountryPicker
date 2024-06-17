@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+@available(macOS 14.0, *)
 protocol CountryProtocol: Observable, Identifiable, BaseProtocol {
 
   var code: String? { get set }
@@ -15,6 +16,7 @@ protocol CountryProtocol: Observable, Identifiable, BaseProtocol {
   var name: String? { get set }
 }
 
+@available(macOS 14.0, *)
 extension CountryProtocol {
   func ID() -> String? { return UUID().uuidString }
 }

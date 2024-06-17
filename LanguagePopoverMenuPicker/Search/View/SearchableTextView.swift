@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 
+@available(macOS 14.0, *)
 struct SearchableTextView<LeadingAccessories: View, TrailingAccessories: View>: View {
     @Environment(\.colorScheme)
     var colorScheme

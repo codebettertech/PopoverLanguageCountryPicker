@@ -8,6 +8,7 @@
 import SwiftUI
 
 
+@available(macOS 14.0, *)
 struct PopoverCountryView: View {
 
   @State private var isShowingPopover = false
@@ -59,6 +60,10 @@ struct PopoverCountryView: View {
 }
 
 #Preview {
-    PopoverCountryView()
+    if #available(macOS 14.0, *) {
+        PopoverCountryView()
+    } else {
+            // Fallback on earlier versions
+    }
 
 }

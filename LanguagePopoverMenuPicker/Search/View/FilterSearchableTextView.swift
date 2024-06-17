@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(macOS 14.0, *)
 struct FilterSearchableTextView: View {
     @State private var text = String.EMPTY_STRING
     @State private var stashChangesIsPresented = false
@@ -94,5 +95,9 @@ struct FilterSearchableTextView: View {
 
 
 #Preview {
-    FilterSearchableTextView()
+    if #available(macOS 14.0, *) {
+        FilterSearchableTextView()
+    } else {
+            // Fallback on earlier versions
+    }
 }

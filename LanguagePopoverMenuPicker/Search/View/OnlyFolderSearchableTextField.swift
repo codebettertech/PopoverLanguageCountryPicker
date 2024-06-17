@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(macOS 14.0, *)
 struct OnlyFolderSearchableTextField: View {
     @State private var searchText: String = String.EMPTY_STRING
     @State private var replaceText: String = String.EMPTY_STRING
@@ -61,5 +62,9 @@ struct OnlyFolderSearchableTextField: View {
 }
 
 #Preview {
-    OnlyFolderSearchableTextField()
+    if #available(macOS 14.0, *) {
+        OnlyFolderSearchableTextField()
+    } else {
+            // Fallback on earlier versions
+    }
 }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(macOS 14.0, *)
 struct MatchCaseSearchableTextView: View {
     @State private var searchText: String = String.EMPTY_STRING
     @State private var replaceText: String = String.EMPTY_STRING
@@ -110,5 +111,8 @@ struct MatchCaseSearchableTextView: View {
 }
 
 #Preview {
-    MatchCaseSearchableTextView()
+    if #available(macOS 14.0, *) {
+        MatchCaseSearchableTextView()
+    } else {
+    }
 }

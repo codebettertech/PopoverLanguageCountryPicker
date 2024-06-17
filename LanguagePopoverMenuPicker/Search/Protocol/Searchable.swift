@@ -9,6 +9,7 @@ import Foundation
 import Combine
 import SwiftUI
 
+@available(macOS 14.0, *)
 protocol Searchable: Observable, Encodable, Hashable {
 
     var searchTerm: String { get set }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(macOS 14.0, *)
 struct WithDescriptionSearchableTextView: View {
     @State private var message: String = ""
     @State private var details: String = ""
@@ -104,5 +105,8 @@ struct WithDescriptionSearchableTextView: View {
 }
 
 #Preview {
-    WithDescriptionSearchableTextView()
+    if #available(macOS 14.0, *) {
+        WithDescriptionSearchableTextView()
+    } else {
+    }
 }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(macOS 14.0, *)
 struct WithSearchableTextView: View {
     @State private var searchText: String = String.EMPTY_STRING
     @State private var replaceText: String = String.EMPTY_STRING
@@ -67,5 +68,9 @@ struct WithSearchableTextView: View {
 }
 
 #Preview {
-    WithSearchableTextView()
+    if #available(macOS 14.0, *) {
+        WithSearchableTextView()
+    } else {
+            // Fallback on earlier versions
+    }
 }

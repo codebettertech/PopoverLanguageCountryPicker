@@ -8,6 +8,7 @@
 import AppKit
 import SwiftUI
 
+@available(macOS 14.0, *)
 struct PopoverCountryItemView: View {
 
   @State private var hovering = false
@@ -78,5 +79,8 @@ struct PopoverCountryItemView: View {
 }
 
 #Preview {
-  PopoverCountryItemView()
+    if #available(macOS 14.0, *) {
+        PopoverCountryItemView()
+    } else {
+    }
 }

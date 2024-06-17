@@ -8,6 +8,7 @@
 import SwiftUI
 
 
+@available(macOS 14.0, *)
 struct SearchableView: View {
     @State private var text = ""
 
@@ -23,6 +24,7 @@ struct SearchableView: View {
 
 
 
+@available(macOS 14.0, *)
 struct SearchedView_Previews: PreviewProvider {
     static var previews: some View {
         Group {

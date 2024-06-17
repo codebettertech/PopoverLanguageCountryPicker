@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(macOS 14.0, *)
 struct ExcludedFolderSearchableTextView: View {
     @State private var searchText: String = String.EMPTY_STRING
     @State private var replaceText: String = String.EMPTY_STRING
@@ -65,5 +66,9 @@ struct ExcludedFolderSearchableTextView: View {
 }
 
 #Preview {
-    ExcludedFolderSearchableTextView()
+    if #available(macOS 14.0, *) {
+        ExcludedFolderSearchableTextView()
+    } else {
+            // Fallback on earlier versions
+    }
 }
