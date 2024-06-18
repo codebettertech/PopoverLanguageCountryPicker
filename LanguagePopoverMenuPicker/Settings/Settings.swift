@@ -11,13 +11,12 @@ import SwiftUI
 
 final class Settings: ObservableObject {
 
-  /// The publicly available singleton instance of ``SettingsModel``
   static var shared: Settings = .init()
 
   private var storeTask: AnyCancellable!
 
   private init() {
-      self.preferences = .init(locale: Locale.current)
+    self.preferences = .init(locale: Locale.current)
     self.preferences = loadSettings()
 
     self.storeTask = self.$preferences.throttle(for: 2, scheduler: RunLoop.main, latest: true).sink
@@ -35,9 +34,9 @@ final class Settings: ObservableObject {
     }
   }
 
-    private func loadCountriesInfo() -> [[String]] {
-        return preferences.countrySettings.countriesInfo
-    }
+  private func loadCountriesInfo() -> [[String]] {
+    return preferences.countrySettings.countriesInfo
+  }
 
   /// Published instance of the ``Settings`` model.
   ///
@@ -45,23 +44,23 @@ final class Settings: ObservableObject {
   @Published var preferences: SettingsData
 
   /// Load and construct ``Settings`` model from
-  /// `~/Library/Application Support/LanguagePopoverMenu/settings.json`
+  /// `~/Library/Application Support/LanguagePopoverMenuPicker/settings.json`
   private func loadSettings() -> SettingsData {
     if !filemanager.fileExists(atPath: settingsURL.path) {
       try? filemanager.createDirectory(at: baseURL, withIntermediateDirectories: false)
-        return .init(locale: Locale.current)
+      return .init(locale: Locale.current)
     }
 
     guard let json = try? Data(contentsOf: settingsURL),
       let prefs = try? JSONDecoder().decode(SettingsData.self, from: json)
     else {
-        return .init(locale: Locale.current)
+      return .init(locale: Locale.current)
     }
     return prefs
   }
 
   /// Save``Settings`` model to
-  /// `~/Library/Application Support/LanguagePopoverMenu/settings.json`
+  /// `~/Library/Application Support/LanguagePopoverMenuPicker/settings.json`
   private func savePreferences(_ data: SettingsData) throws {
     let data = try JSONEncoder().encode(data)
     let json = try JSONSerialization.jsonObject(with: data)
@@ -74,16 +73,16 @@ final class Settings: ObservableObject {
 
   /// The base URL of settings.
   ///
-  /// Points to `~/Library/Application Support/LanguagePopoverMenu/`
+  /// Points to `~/Library/Application Support/LanguagePopoverMenuPicker/`
   internal var baseURL: URL {
     filemanager
       .homeDirectoryForCurrentUser
-      .appendingPathComponent("Library/Application Support/LanguagePopoverMenu", isDirectory: true)
+      .appendingPathComponent("Library/Application Support/LanguagePopoverMenuPicker", isDirectory: true)
   }
 
   /// The URL of the `settings.json` settings file.
   ///
-  /// Points to `~/Library/Application Support/LanguagePopoverMenu/settings.json`
+  /// Points to `~/Library/Application Support/LanguagePopoverMenuPicker/settings.json`
   private var settingsURL: URL {
     baseURL
       .appendingPathComponent("settings")

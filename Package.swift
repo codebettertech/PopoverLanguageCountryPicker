@@ -12,7 +12,7 @@ let package = Package(
   name: "LanguagePopoverMenuPicker",
   platforms: [
     .macOS(.v10_13),
-    .macOS(.v13),
+    .macOS(.v14),
     .iOS(.v14),
     .visionOS(.v1),
     .tvOS(.v13),
@@ -25,19 +25,23 @@ let package = Package(
     )
   ],
   dependencies: [
-    // Dependencies declare other packages that this package depends on.
-    // .package(url: /* package url */, from: "1.0.0"),
+    .package(url: "https://github.com/siteline/swiftui-introspect", from: "1.0.0")
   ],
   targets: [
     // Targets are the basic building blocks of a package. A target can define a module or a test suite.
     // Targets can depend on other targets in this package, and on products in packages which this package depends on.
     .target(
       name: "LanguagePopoverMenuPicker",
-      dependencies: []
+      dependencies: [
+        .product(name: "SwiftUIIntrospect", package: "swiftui-introspect")
     ),
     .testTarget(
       name: "LanguagePopoverMenuPickerTests",
       dependencies: ["LanguagePopoverMenuPicker"]
     ),
+    .uiTestTarget(
+      name: "LanguagePopoverMenuPickerUITests",
+      dependencies: ["LanguagePopoverMenuPicker"]
+    )
   ]
 )

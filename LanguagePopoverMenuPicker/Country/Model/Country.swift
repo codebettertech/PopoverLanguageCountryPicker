@@ -9,12 +9,11 @@ import Foundation
 import SwiftUI
 
 class Country: CountryProtocol {
-
-  required public init?(nibName nibNameOrNil: NSNib.Name?, bundle nibBundleOrNil: Bundle?) {
+  public required init?(nibName nibNameOrNil: NSNib.Name?, bundle nibBundleOrNil: Bundle?) {
     return nil
   }
 
-  required public init?(coder: NSCoder) {
+  public required init?(coder: NSCoder) {
     return nil
   }
 
@@ -37,9 +36,12 @@ class Country: CountryProtocol {
   }
 }
 
-extension Array where Element: Equatable {
-
-    public var countriesNames: [Element] {
+extension Array where Element: Comparable {
+  @available(
+    *, deprecated, renamed: "Locale.isoRegionCodes",
+    message: "try to bypass the problem with `Locale.Region.isoRegions`"
+  )
+  public var countriesNames: [Element] {
     let isoCodes: [Element] = [].countriesISOCodes
     var countrieNames: [Element] = []
     for isoCode in isoCodes {
@@ -48,7 +50,11 @@ extension Array where Element: Equatable {
     return countrieNames
   }
 
-    public var countriesFlags: [Element] {
+  @available(
+    *, deprecated, renamed: "Locale.isoRegionCodes",
+    message: "try to bypass the problem with `Locale.Region.isoRegions`"
+  )
+  public var countriesFlags: [Element] {
     let flagBase = Unicode.Scalar("🇦").value - Unicode.Scalar("A").value
     var flags: [Element] = []
     let isoCodes = Locale.isoRegionCodes
@@ -61,15 +67,19 @@ extension Array where Element: Equatable {
         .joined()
       flags.append(flag as! Element)
     }
+    flags.sort()
     return flags.unique
   }
 
   public func filtered(_ searchText: String) -> [Element] {
-      return self.filter { ($0 as! String).lowercased().contains(searchText.lowercased()) }
+    return filter { ($0 as! String).lowercased().contains(searchText.lowercased()) }
   }
 
+  @available(
+    *, deprecated, renamed: "Locale.isoRegionCodes",
+    message: "try to bypass the problem with `Locale.Region.isoRegions`"
+  )
   public var countriesISOCodes: [Element] {
-
     let isoCodes = Locale.isoRegionCodes.unique
     return (isoCodes as? [Element])!
   }

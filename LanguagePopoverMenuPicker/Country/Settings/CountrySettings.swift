@@ -45,10 +45,6 @@ extension SettingsData {
                 [String].self,
                 forKey: .countriesNames
             ) ?? []
-            self.countriesInfo = try container.decodeIfPresent(
-                [[String]].self,
-                forKey: .preferredLanguage
-            ) ?? [[]]
         }
     }
 }

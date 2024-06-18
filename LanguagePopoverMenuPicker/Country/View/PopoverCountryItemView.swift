@@ -82,5 +82,6 @@ struct PopoverCountryItemView: View {
     if #available(macOS 14.0, *) {
         PopoverCountryItemView()
     } else {
+            // Fallback on earlier versions
     }
 }

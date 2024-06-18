@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 73;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		AA4AD7472C20D4ED00BADA80 /* LanguagePopoverMenuPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4AD7462C20D4ED00BADA80 /* LanguagePopoverMenuPickerTests.swift */; };
 		AA4AD7512C20D4ED00BADA80 /* LanguagePopoverMenuPickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4AD7502C20D4ED00BADA80 /* LanguagePopoverMenuPickerUITests.swift */; };
 		AA4AD7532C20D4ED00BADA80 /* LanguagePopoverMenuPickerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4AD7522C20D4ED00BADA80 /* LanguagePopoverMenuPickerUITestsLaunchTests.swift */; };
+		AA97A83D2C219E6800786153 /* SwiftUIIntrospect in Frameworks */ = {isa = PBXBuildFile; productRef = AA97A83C2C219E6800786153 /* SwiftUIIntrospect */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +35,7 @@
 
 /* Begin PBXFileReference section */
 		AA18AE3E2C20D97600EF0CB8 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		AA4AD72F2C20D4EB00BADA80 /* LanguagePopoverMenuPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LanguagePopoverMenuPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA4AD72F2C20D4EB00BADA80 /* Language Menu Picker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Language Menu Picker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA4AD7322C20D4EB00BADA80 /* LanguagePopoverMenuPickerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePopoverMenuPickerApp.swift; sourceTree = "<group>"; };
 		AA4AD7382C20D4EC00BADA80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA4AD73A2C20D4EC00BADA80 /* LanguagePopoverMenuPicker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LanguagePopoverMenuPicker.entitlements; sourceTree = "<group>"; };
@@ -44,6 +45,13 @@
 		AA4AD74C2C20D4ED00BADA80 /* LanguagePopoverMenuPickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LanguagePopoverMenuPickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA4AD7502C20D4ED00BADA80 /* LanguagePopoverMenuPickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePopoverMenuPickerUITests.swift; sourceTree = "<group>"; };
 		AA4AD7522C20D4ED00BADA80 /* LanguagePopoverMenuPickerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePopoverMenuPickerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AA97A7E92C21969800786153 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		AA97A7EA2C2197AB00786153 /* Alpha.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Alpha.xcconfig; sourceTree = "<group>"; };
+		AA97A7EB2C2197AB00786153 /* Beta.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Beta.xcconfig; sourceTree = "<group>"; };
+		AA97A7EC2C2197AB00786153 /* Pre.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Pre.xcconfig; sourceTree = "<group>"; };
+		AA97A7ED2C2197AB00786153 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		AA97A83E2C21A8B700786153 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		AA97A83F2C21A8B700786153 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -59,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA97A83D2C219E6800786153 /* SwiftUIIntrospect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +91,10 @@
 		AA4AD7262C20D4EB00BADA80 = {
 			isa = PBXGroup;
 			children = (
+				AA97A83E2C21A8B700786153 /* LICENSE */,
+				AA97A83F2C21A8B700786153 /* README.md */,
 				AA18AE3E2C20D97600EF0CB8 /* Package.swift */,
+				AA97A7E82C21961600786153 /* Configuration */,
 				AA4AD7312C20D4EB00BADA80 /* LanguagePopoverMenuPicker */,
 				AA4AD7452C20D4ED00BADA80 /* LanguagePopoverMenuPickerTests */,
 				AA4AD74F2C20D4ED00BADA80 /* LanguagePopoverMenuPickerUITests */,
@@ -93,7 +105,7 @@
 		AA4AD7302C20D4EB00BADA80 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AA4AD72F2C20D4EB00BADA80 /* LanguagePopoverMenuPicker.app */,
+				AA4AD72F2C20D4EB00BADA80 /* Language Menu Picker.app */,
 				AA4AD7422C20D4ED00BADA80 /* LanguagePopoverMenuPickerTests.xctest */,
 				AA4AD74C2C20D4ED00BADA80 /* LanguagePopoverMenuPickerUITests.xctest */,
 			);
@@ -141,6 +153,18 @@
 			path = LanguagePopoverMenuPickerUITests;
 			sourceTree = "<group>";
 		};
+		AA97A7E82C21961600786153 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				AA97A7EA2C2197AB00786153 /* Alpha.xcconfig */,
+				AA97A7EB2C2197AB00786153 /* Beta.xcconfig */,
+				AA97A7EC2C2197AB00786153 /* Pre.xcconfig */,
+				AA97A7ED2C2197AB00786153 /* Release.xcconfig */,
+				AA97A7E92C21969800786153 /* Debug.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,8 +188,11 @@
 				AA4AD79C2C20D54E00BADA80 /* Theme */,
 			);
 			name = LanguagePopoverMenuPicker;
+			packageProductDependencies = (
+				AA97A83C2C219E6800786153 /* SwiftUIIntrospect */,
+			);
 			productName = LanguagePopoverMenuPicker;
-			productReference = AA4AD72F2C20D4EB00BADA80 /* LanguagePopoverMenuPicker.app */;
+			productReference = AA4AD72F2C20D4EB00BADA80 /* Language Menu Picker.app */;
 			productType = "com.apple.product-type.application";
 		};
 		AA4AD7412C20D4ED00BADA80 /* LanguagePopoverMenuPickerTests */ = {
@@ -228,7 +255,6 @@
 				};
 			};
 			buildConfigurationList = AA4AD72A2C20D4EB00BADA80 /* Build configuration list for PBXProject "LanguagePopoverMenuPicker" */;
-			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -236,6 +262,10 @@
 				Base,
 			);
 			mainGroup = AA4AD7262C20D4EB00BADA80;
+			packageReferences = (
+				AA97A83B2C219E6800786153 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+			);
+			preferredProjectObjectVersion = 73;
 			productRefGroup = AA4AD7302C20D4EB00BADA80 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -350,6 +380,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -367,13 +398,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_PROFILING_CODE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACH_O_TYPE = mh_execute;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = auto;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Debug;
 		};
@@ -412,6 +449,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -423,11 +461,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_PROFILING_CODE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACH_O_TYPE = mh_execute;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = auto;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Release;
 		};
@@ -436,31 +481,35 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = LanguagePopoverMenuPicker/LanguagePopoverMenuPicker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LanguagePopoverMenuPicker/Preview Content\"";
 				DEVELOPMENT_TEAM = T6WGJMZTF8;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				GENERATE_PROFILING_CODE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Language Menu Picker";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.graphics-design";
+				INFOPLIST_KEY_LSUIElement = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=macosx*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=macosx*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.bettercode.language.popovermenu.picker.macos.LanguagePopoverMenuPicker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.education.mathlatex.osx.LanguagePopoverMenuPicker;
+				PRODUCT_NAME = "Language Menu Picker";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -476,31 +525,36 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = LanguagePopoverMenuPicker/LanguagePopoverMenuPicker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LanguagePopoverMenuPicker/Preview Content\"";
 				DEVELOPMENT_TEAM = T6WGJMZTF8;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				GENERATE_PROFILING_CODE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Language Menu Picker";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.graphics-design";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=macosx*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=macosx*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=*]" = "";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.bettercode.language.popovermenu.picker.macos.LanguagePopoverMenuPicker;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.education.mathlatex.osx.LanguagePopoverMenuPicker;
+				PRODUCT_NAME = "Language Menu Picker";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -519,8 +573,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T6WGJMZTF8;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleBlackTranslucent;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = app.bettercode.language.popovermenu.picker.macos.LanguagePopoverMenuPickerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -530,7 +586,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LanguagePopoverMenuPicker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LanguagePopoverMenuPicker";
-				XROS_DEPLOYMENT_TARGET = 2.0;
+				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Debug;
 		};
@@ -542,8 +598,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T6WGJMZTF8;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleBlackTranslucent;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = app.bettercode.language.popovermenu.picker.macos.LanguagePopoverMenuPickerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -553,7 +611,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LanguagePopoverMenuPicker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LanguagePopoverMenuPicker";
-				XROS_DEPLOYMENT_TARGET = 2.0;
+				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Release;
 		};
@@ -564,8 +622,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T6WGJMZTF8;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = app.bettercode.language.popovermenu.picker.macos.LanguagePopoverMenuPickerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -575,7 +633,8 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
 				TEST_TARGET_NAME = LanguagePopoverMenuPicker;
-				XROS_DEPLOYMENT_TARGET = 2.0;
+				TVOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_TVOS_DEPLOYMENT_TARGET)";
+				XROS_DEPLOYMENT_TARGET = 1.1;
 			};
 			name = Debug;
 		};
@@ -586,8 +645,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T6WGJMZTF8;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = app.bettercode.language.popovermenu.picker.macos.LanguagePopoverMenuPickerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -597,7 +656,8 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
 				TEST_TARGET_NAME = LanguagePopoverMenuPicker;
-				XROS_DEPLOYMENT_TARGET = 2.0;
+				TVOS_DEPLOYMENT_TARGET = "$(RECOMMENDED_TVOS_DEPLOYMENT_TARGET)";
+				XROS_DEPLOYMENT_TARGET = 1.1;
 			};
 			name = Release;
 		};
@@ -641,6 +701,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AA97A83B2C219E6800786153 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AA97A83C2C219E6800786153 /* SwiftUIIntrospect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA97A83B2C219E6800786153 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = SwiftUIIntrospect;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AA4AD7272C20D4EB00BADA80 /* Project object */;
 }

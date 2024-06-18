@@ -6,9 +6,8 @@
 //
 
 import SwiftUI
+import SwiftUIIntrospect
 
-
-@available(macOS 14.0, *)
 struct PopoverCountryView: View {
 
   @State private var isShowingPopover = false
@@ -55,15 +54,14 @@ struct PopoverCountryView: View {
         
     }
     .preferredColorScheme(.dark)
+    .introspect(.scrollView, on: .macOS(.v10_15, .v13, .v14, .v15)) {
+        print(type(of: $0))
+    }
 
   }
 }
 
 #Preview {
-    if #available(macOS 14.0, *) {
         PopoverCountryView()
-    } else {
-            // Fallback on earlier versions
-    }
 
 }
